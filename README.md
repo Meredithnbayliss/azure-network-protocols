@@ -125,4 +125,66 @@ In step 8, Re-enable ICMP traffic for the Network Security Group in your Ubuntu 
 </p>
 </p>
 <img src="https://i.imgur.com/MuLikZy.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+</p>
+In step 9,Time to observe SSH traffic
+
+Back in Wireshark, filter for SSH traffic only and from your Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
+
+Exit the SSH connection by typing ‘exit’ and pressing [return]:
+</p>
+</p>
+</p>
+<img src="https://i.imgur.com/8e3GZ1C.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+</p>
+<img src="https://i.imgur.com/TzpN9aB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+</p>
+In Step 10, Next, we're going to observe DHCP Traffic
+
+Back in Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
+
+Observe the DHCP traffic appearing in WireShark:
+</p>
+</p>
+</p>
+<img src="https://i.imgur.com/Pqx4Hq4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+In Step 11, Let's now observe our DNS traffic next
+
+Back in Wireshark, filter for DNS traffic only.
+
+From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
+</p>
+</p>
+</p>
+<img src="https://i.imgur.com/K7vBc2P.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+</p>
+<img src="https://i.imgur.com/DPlxOXh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+In Step 11, Finally, we will observe RDP traffic to finish up this tutorial
+
+Back in Wireshark, filter for RDP traffic only using "tcp.port==3389".
+
+You'll be obseving a non-stop stream of traffic. Do you know why there is constant traffic in our tcp.port==3389?
+
+The answer is because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted:
+</p>
+</p>
+</p>
+<img src="https://i.imgur.com/qvuMBz1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT! This will prevent you from incurring additional charges and you won't be left surprised!
+
+Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. You'll typically be notified or can click unde the bell notification just to make sure.
+
+
+
 
