@@ -34,27 +34,31 @@ In this tutorial, I will observe various network traffic to and from Azure Virtu
 In Step 1: We create a Resource Group inside Azure.
 
 <p>
-<img src="https://i.imgur.com/NLmkO3I.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/C1atwQb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In step 2, we create a Windows 10 Virtual Machine (VM) with 2-4 virtual CPU's inside Azure. We will also allow the Virtual Machine to create a new virtual network (Vnet). We will then create a username and password of our choice. This username and password will be used for the Remote Desktop function we are using to access the virtual machine we just created. 
+In step 2, create your Windows virtual machine. I typically create the VM in (US) East US.
+
+While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section:
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/zUJXPhs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/0wyRzfF.png" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In step 3, we open the Remote Desktop Connection app on our computer. A remote desktop is an internet-enabled program or operating system feature that lets someone access a computer from a different location, just as if they were interacting with the device locally. We will be using this to connect to the Virtual Machine we created in Azure. 
+In step 3, Create an Ubuntu virtual machine.
+
+While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section (not seen in image):
+
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/gjCqlbo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/FqzmddI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-<img src="https://i.imgur.com/7rFwxkw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<p>
-In step 4, we install / Enable IIS in Windows. IIS is a web server that OS Ticket runs on. Go to your Search Bar > Type "Control Panel" > Click "Programs" > "Turn Windows features on or off" > Scroll down to "Internet Information Services (IIS).
-
+In step 4, Observe Your Virtual Network within Network Watcher:
 </p>
+<img src="https://i.imgur.com/lRSvHZY.png" width="80%" alt="Disk Sanitization Steps"/>
