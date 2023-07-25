@@ -49,9 +49,7 @@ While creating the VM, select the previously created Resource Group and allow it
 <p>
 In step 3, Create an Ubuntu virtual machine.
 
-While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section (not seen in image):
-
-
+While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet.
 </p>
 <br />
 
@@ -155,11 +153,11 @@ Observe the DHCP traffic appearing in WireShark:
 <img src="https://i.imgur.com/Pqx4Hq4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 </p>
-In Step 11, Let's now observe our DNS traffic next
+In Step 11, we now observe our DNS traffic 
 
 Back in Wireshark, filter for DNS traffic only.
 
-From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
+From our Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are and observe the DNS traffic being shown in WireShark:
 </p>
 </p>
 </p>
@@ -170,20 +168,20 @@ From your Windows 10 VM within a command line, use nslookup to see what google.c
 <img src="https://i.imgur.com/DPlxOXh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 </p>
-In Step 11, Finally, we will observe RDP traffic to finish up this tutorial
+In Step 11 we will observe RDP traffic to finish up this tutorial
 
 Back in Wireshark, filter for RDP traffic only using "tcp.port==3389".
 
-You'll be obseving a non-stop stream of traffic. Do you know why there is constant traffic in our tcp.port==3389?
+We will be obseving a non-stop stream of traffic. Do you know why there is constant traffic in our tcp.port==3389?
 
 The answer is because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted:
 </p>
 </p>
 </p>
 <img src="https://i.imgur.com/qvuMBz1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT! This will prevent you from incurring additional charges and you won't be left surprised!
+Now that we're finished observing the network, we clean up our azure environment. This will prevent us from incurring additional charges.
 
-Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. You'll typically be notified or can click unde the bell notification just to make sure.
+Close Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. We will typically be notified or can click unde the bell notification just to make sure.
 
 
 
