@@ -37,7 +37,7 @@ In Step 1: We create a Resource Group inside Azure.
 <img src="https://i.imgur.com/C1atwQb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-In step 2, create your Windows virtual machine. I typically create the VM in (US) East US.
+In step 2, we create our Windows virtual machine. 
 
 While creating the VM, select the previously created Resource Group and allow it to create a new Virtual Network (Vnet) and Subnet. Make sure to use the password option under the Administrator Account section:
 </p>
@@ -62,7 +62,7 @@ In step 4, Observe Your Virtual Network within Network Watcher:
 <img src="https://i.imgur.com/lRSvHZY.png" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 </p>
-In Step 5: Remote into your Windows 10 Virtual Machine, install Wireshark, open it and filter for ICMP traffic only.
+In Step 5: Remote into our Windows 10 Virtual Machine, install Wireshark, open it and filter for ICMP traffic only.
 </p>
 </p>
 <img src="https://i.imgur.com/3sJoaLr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -89,7 +89,7 @@ Attempt to ping a public website (such as www.google.com) and observe the traffi
 </p>
 </p>
 </p>
-Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM:
+Initiate a perpetual/non-stop ping from our Windows 10 VM to our Ubuntu VM:
 </p>
 </p>
 <img src="https://i.imgur.com/LGTlxLs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -110,7 +110,7 @@ In Step 7, Open the Network Security Group your Ubuntu VM is using and disable i
 </p>
 </p>
 </p>
-In step 8, Re-enable ICMP traffic for the Network Security Group in your Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity:
+In step 8, Re-enable ICMP traffic for the Network Security Group in our Ubuntu VM and back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line ping activity (should start working again).Finally, stop the ping activity:
 </p>
 </p>
 </p>
@@ -128,7 +128,7 @@ In step 8, Re-enable ICMP traffic for the Network Security Group in your Ubuntu 
 </p>
 In step 9,Time to observe SSH traffic
 
-Back in Wireshark, filter for SSH traffic only and from your Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
+Back in Wireshark, filter for SSH traffic only and from our Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
 
 Exit the SSH connection by typing ‘exit’ and pressing [return]:
 </p>
@@ -144,7 +144,7 @@ Exit the SSH connection by typing ‘exit’ and pressing [return]:
 </p>
 In Step 10, Next, we're going to observe DHCP Traffic
 
-Back in Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
+Back in Wireshark, filter for DHCP traffic only. From your Windows 10 VM, we attempt to issue our VM a new IP address from the command line (ipconfig /renew)
 
 Observe the DHCP traffic appearing in WireShark:
 </p>
